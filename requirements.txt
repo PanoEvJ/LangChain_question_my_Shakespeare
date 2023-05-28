@@ -1,0 +1,7 @@
+langchain
+transformers
+beautifulsoup4
+huggingface-hub
+sentence_transformers
+chromadb
+gradio
