@@ -21,6 +21,9 @@ embeddings = HuggingFaceEmbeddings()
 persist_directory = "vector_db"
 vectordb = Chroma.from_documents(documents=documents, embedding=embeddings, persist_directory=persist_directory)
 vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
+vectordb.persist()
+vectordb = None
+vectordb = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
 
 llm = HuggingFacePipeline.from_model_id(
     model_id="bigscience/bloomz-1b7", 
